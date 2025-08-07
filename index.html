@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delícia da Vila - Kits para Festas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .flour-texture {
+            background-image: url('https://www.transparenttextures.com/patterns/cream-pixels.png');
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+        }
+        
+        .menu-toggle {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+                z-index: 50;
+            }
+            .nav-menu.active {
+                display: block;
+            }
+            .nav-menu ul {
+                flex-direction: column;
+            }
+            .kit-card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5511987654321?text=Olá%20Delícia%20da%20Vila!%20Gostaria%20de%20saber%20mais%20sobre%20os%20kits%20para%20festa." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="img/logo.png" alt="Logo Delícia da Vila" class="h-12 mr-7">
+                <h1 class="text-xl font-bold text-orange-600"></h1>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="menu-toggle md:hidden text-orange-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <!-- Navigation Menu -->
+            <nav class="nav-menu">
+                <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
+                    <li><a href="#inicio" class="text-orange-600 font-medium hover:text-orange-800">Início</a></li>
+                    <li><a href="#kits" class="text-gray-700 hover:text-orange-600">Kits</a></li>
+                    <li><a href="#como-funciona" class="text-gray-700 hover:text-orange-600">Como Funciona</a></li>
+                    <li><a href="#contato" class="text-gray-700 hover:text-orange-600">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section text-white py-20 md:py-32 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Kits Festa que Arrasam - Prontos em 24h!</h1>
+            <p class="text-xl md:text-2xl mb-8">Salgados, Doces e Bolos Fresquinhos para sua Celebração</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#kits" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">Ver Kits Completos</a>
+                <a href="https://wa.me/5511987654321?text=Olá%20Delícia%20da%20Vila!%20Gostaria%20de%20saber%20mais%20sobre%20os%20kits%20para%20festa." class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition duration-300" target="_blank">Pedir por WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="bg-yellow-50 py-12 flour-texture">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-6">
+                <div class="flex items-center bg-white rounded-lg shadow-sm p-4">
+                    <span class="text-orange-500 text-2xl mr-3">🕒</span>
+                    <span class="font-medium">Entrega em 24h</span>
+                </div>
+                <div class="flex items-center bg-white rounded-lg shadow-sm p-4">
+                    <span class="text-orange-500 text-2xl mr-3">🌱</span>
+                    <span class="font-medium">Ingredientes Frescos</span>
+                </div>
+                <div class="flex items-center bg-white rounded-lg shadow-sm p-4">
+                    <span class="text-orange-500 text-2xl mr-3">🎂</span>
+                    <span class="font-medium">Personalização</span>
+                </div>
+                <div class="flex items-center bg-white rounded-lg shadow-sm p-4">
+                    <span class="text-orange-500 text-2xl mr-3">💰</span>
+                    <span class="font-medium">Preço Justo</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kits Section -->
+    <section id="kits" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-orange-600">Nossos Kits para Festa</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Kit 1 -->
+                <div class="kit-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="img/kit.png" alt="Kit Básico" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Kit Básico para 20 Convidados</h3>
+                        <ul class="mb-4 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 60 salgados variados</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 30 docinhos tradicionais</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 1 bolo simples (1kg)</li>
+                        </ul>
+                        <p class="text-2xl font-bold text-orange-600 mb-4">R$ 189,90</p>
+                        <a href="https://wa.me/5511987654321?text=Olá%20Delícia%20da%20Vila!%20Gostaria%20do%20Kit%20Básico%20para%2020%20Convidados%20para%20minha%20festa.%20Pode%20confirmar%20disponibilidade?" class="block w-full bg-orange-500 hover:bg-orange-600 text-white text-center font-bold py-2 px-4 rounded transition duration-300">
+                            Quero este kit!
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Kit 2 -->
+                <div class="kit-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="img/kit.png" alt="Kit Premium" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Kit Premium para 30 Convidados</h3>
+                        <ul class="mb-4 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 100 salgados variados</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 50 docinhos finos</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 1 bolo decorado (1,5kg)</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 2 opções de sucos</li>
+                        </ul>
+                        <p class="text-2xl font-bold text-orange-600 mb-4">R$ 289,90</p>
+                        <a href="https://wa.me/5511987654321?text=Olá%20Delícia%20da%20Vila!%20Gostaria%20do%20Kit%20Premium%20para%2030%20Convidados%20para%20minha%20festa.%20Pode%20confirmar%20disponibilidade?" class="block w-full bg-orange-500 hover:bg-orange-600 text-white text-center font-bold py-2 px-4 rounded transition duration-300">
+                            Quero este kit!
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Kit 3 -->
+                <div class="kit-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="img/kit.png" alt="Kit Luxo" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Kit Luxo para 50 Convidados</h3>
+                        <ul class="mb-4 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 150 salgados premium</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 80 docinhos gourmet</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 1 bolo artístico (2kg)</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 3 opções de sucos</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Decoração básica da mesa</li>
+                        </ul>
+                        <p class="text-2xl font-bold text-orange-600 mb-4">R$ 429,90</p>
+                        <a href="https://wa.me/5511987654321?text=Olá%20Delícia%20da%20Vila!%20Gostaria%20do%20Kit%20Luxo%20para%2050%20Convidados%20para%20minha%20festa.%20Pode%20confirmar%20disponibilidade?" class="block w-full bg-orange-500 hover:bg-orange-600 text-white text-center font-bold py-2 px-4 rounded transition duration-300">
+                            Quero este kit!
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-lg mb-4">Não encontrou o que procura?</p>
+                <a href="https://wa.me/5511987654321?text=Olá%20Delícia%20da%20Vila!%20Gostaria%20de%20um%20kit%20personalizado%20para%20minha%20festa." class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition duration-300" target="_blank">
+                    Peça um kit personalizado <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="como-funciona" class="py-16 bg-gray-50 flour-texture">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-orange-600">Como Funciona</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center p-6 bg-white rounded-lg shadow-sm">
+                    <div class="text-4xl mb-4">1️⃣</div>
+                    <h3 class="text-xl font-bold mb-2">Escolha seu kit</h3>
+                    <p class="text-gray-600">Selecione o kit ideal para o tamanho da sua festa ou peça um personalizado.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-lg shadow-sm">
+                    <div class="text-4xl mb-4">2️⃣</div>
+                    <h3 class="text-xl font-bold mb-2">Clique no WhatsApp</h3>
+                    <p class="text-gray-600">Entre em contato direto conosco para confirmar disponibilidade e data.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-lg shadow-sm">
+                    <div class="text-4xl mb-4">3️⃣</div>
+                    <h3 class="text-xl font-bold mb-2">Combine detalhes</h3>
+                    <p class="text-gray-600">Definimos juntos data, horário de entrega e endereço.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-lg shadow-sm">
+                    <div class="text-4xl mb-4">4️⃣</div>
+                    <h3 class="text-xl font-bold mb-2">Receba fresquinho</h3>
+                    <p class="text-gray-600">Entregamos tudo fresquinho e pronto para servir no dia combinado!</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-orange-100 border-l-4 border-orange-500 p-4 rounded">
+                <p class="text-orange-700"><strong>Dica:</strong> Encomende com pelo menos 48h de antecedência para garantir disponibilidade. Para pedidos em menos de 24h, consulte-nos via WhatsApp.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-orange-600">O que dizem nossos clientes</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"O kit premium foi perfeito para o aniversário da minha filha! Tudo muito fresquinho e delicioso. Os convidados amaram!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Cliente" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <p class="font-medium">Ana Carolina</p>
+                            <p class="text-sm text-gray-500">Festa de 15 anos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Surpreendente! Pedi com apenas um dia de antecedência e tudo chegou perfeito. O bolo estava lindo e os salgados muito saborosos."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <p class="font-medium">Ricardo Almeida</p>
+                            <p class="text-sm text-gray-500">Evento corporativo</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Já encomendei várias vezes e nunca decepciona. A relação custo-benefício é excelente e a qualidade é sempre top!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Cliente" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <p class="font-medium">Fernanda Souza</p>
+                            <p class="text-sm text-gray-500">Chá de bebê</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 flex flex-wrap justify-center gap-4">
+                <div class="flex items-center bg-white p-3 rounded-full shadow-sm">
+                    <img src="img/higiente.png" alt="Selo" class="h-10 w-10 mr-2">
+                    <span class="text-sm font-medium">Cozinha Higienizada</span>
+                </div>
+                <div class="flex items-center bg-white p-3 rounded-full shadow-sm">
+                    <img src="img/frescos.png" alt="Selo" class="h-10 w-10 mr-2">
+                    <span class="text-sm font-medium">Produtos Frescos</span>
+                </div>
+                <div class="flex items-center bg-white p-3 rounded-full shadow-sm">
+                    <img src="img/rapido.png" alt="Selo" class="h-10 w-10 mr-2">
+                    <span class="text-sm font-medium">Atendimento Rápido</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-16 bg-orange-50 flour-texture">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-orange-600">Fale Conosco</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Informações de Contato</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-orange-500 mt-1 mr-3"></i>
+                            <div>
+                                <p class="font-medium">Endereço:</p>
+                                <p>Rua das Panificadoras, 123 - Vila Delícia<br>São Paulo/SP</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-orange-500 mt-1 mr-3"></i>
+                            <div>
+                                <p class="font-medium">Horário de Funcionamento:</p>
+                                <p>Segunda a Sexta: 7h às 19h<br>Sábado: 7h às 14h<br>Domingo: Fechado</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fab fa-whatsapp text-orange-500 mt-1 mr-3"></i>
+                            <div>
+                                <p class="font-medium">WhatsApp:</p>
+                                <p>(11) 98765-4321</p>
+                                <a href="https://wa.me/5511987654321" class="text-orange-600 hover:text-orange-800 font-medium inline-block mt-1">Clique para conversar</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-3">Siga-nos nas redes sociais</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-orange-500 text-white p-3 rounded-full hover:bg-orange-600 transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-orange-500 text-white p-3 rounded-full hover:bg-orange-600 transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Localização</h3>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0754267452926!2d-46.65342658447536!3d-23.565734367638192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1629840000000!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-lg"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-orange-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <!--<img src="https://via.placeholder.com/40" alt="Logo Delícia da Vila" class="h-10 mr-3">
+                        <h2 class="text-xl font-bold">Delícia da Vila</h2>-->
+                    </div>
+                    <p class="mt-2 text-orange-200">Kits completos para sua festa com qualidade e sabor inigualáveis!</p>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-orange-200">© 2025 CliqUp Performance. Todos os direitos reservados.</p>
+                    <p class="text-orange-200 mt-1">CNPJ: 12.345.678/0001-99</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-menu').classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
